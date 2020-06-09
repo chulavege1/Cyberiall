@@ -20,6 +20,17 @@
         };
     </script>
     <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0&appId=478922632821076&autoLogAppEvents=1" nonce="PQZ6OpkL"></script>
+      <script>
+        FB.getLoginStatus(function(response) {
+          if (response.status === 'connected') {
+            console.log(response.authResponse.accessToken);
+          }
+          else {
+            console.log('User not connected')
+          }
+        });
+      </script>
       <script>
         let vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
